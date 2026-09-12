@@ -20,3 +20,11 @@ export const contactSchema = z.object({
   subject: z.string().trim().min(2).max(160),
   message: z.string().trim().min(2).max(1000)
 });
+
+export const careerSchema = z.object({
+  name: z.string().trim().min(2).max(120),
+  phone: z.string().trim().regex(/^[0-9+\-\s]{8,18}$/),
+  email: z.string().trim().email(),
+  role: z.string().trim().min(2).max(160),
+  message: z.string().trim().min(2).max(1000)
+});

@@ -3,7 +3,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 
 const groups = [
-  { title: "Company", links: [["Home", "/"], ["Our Motivation", "/our-motivation"], ["Services", "/services"], ["Careers", "/careers"], ["Contact", "/contact"]] },
+  { title: "Company", links: [["Home", "/"], ["Our Motivation", "/our-motivation"], ["Services", "/services"], ["Client Reviews", "/client-reviews"], ["Careers", "/careers"], ["Contact", "/contact"]] },
   { title: "Applications", links: [["Government Jobs", "/government-jobs"], ["Application Forms", "/application-forms"], ["Latest Jobs", "/government-jobs"], ["Closing Soon", "/government-jobs?status=closing-soon"]] },
   { title: "Support", links: [["FAQ", "/faq"], ["Application Assistance", "/assistance"], ["Contact", "/contact"]] },
   { title: "Legal", links: [["Privacy Policy", "/privacy-policy"], ["Terms & Conditions", "/terms-and-conditions"], ["Disclaimer", "/disclaimer"]] }
@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="border-t border-slate-200 bg-white">
       <div className="container grid gap-10 py-12 lg:grid-cols-[1.4fr_2fr]">
         <div>
-          <Image src="/logo.png" alt="iDS Expert" width={190} height={108} className="h-16 w-auto object-contain" />
+          <Image src="/logo.png" alt="iDS Expert" width={190} height={108} className="h-14 w-auto object-contain" />
           <p className="mt-4 max-w-md text-sm leading-6 text-slate-600">{siteConfig.description}</p>
           <p className="mt-4 text-sm font-bold text-brand-navy">Phone / WhatsApp: {siteConfig.phone}</p>
         </div>

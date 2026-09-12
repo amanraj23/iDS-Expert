@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { ArrowRight, CalendarDays, FileSearch, PhoneCall, Search, ShieldCheck } from "lucide-react";
 import { ButtonLink } from "@/components/ui/ButtonLink";
 import { Disclaimer } from "@/components/ui/Disclaimer";
@@ -9,22 +8,22 @@ export default function HomePage() {
   return (
     <>
       <section className="overflow-hidden bg-white">
-        <div className="container grid min-h-[calc(100vh-118px)] items-center gap-10 py-10 lg:grid-cols-[1fr_.9fr]">
+        <div className="container grid gap-8 py-10 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:py-14">
           <div>
             <div className="inline-flex items-center gap-2 rounded-md border border-brand-blue/15 bg-brand-sky px-3 py-2 text-xs font-black uppercase text-brand-blue">
               <ShieldCheck size={16} /> Independent assistance portal
             </div>
-            <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-brand-navy sm:text-5xl lg:text-6xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
               Get Assistance With Government Job & Online Application Forms
             </h1>
             <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
               Find important application forms, check eligibility and deadlines, and get professional assistance with the online application process.
             </p>
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-7 flex flex-col gap-3 sm:flex-row">
               <ButtonLink href="/assistance">Get Application Assistance <ArrowRight size={18} /></ButtonLink>
               <ButtonLink href="/government-jobs" variant="outline">Explore Applications</ButtonLink>
             </div>
-            <div className="mt-8 grid max-w-2xl gap-3 sm:grid-cols-3">
+            <div className="mt-7 grid max-w-2xl gap-3 sm:grid-cols-3">
               {[
                 ["8+", "service categories"],
                 ["24 hr", "request response"],
@@ -41,19 +40,35 @@ export default function HomePage() {
             </div>
           </div>
 
-          <div className="rounded-md border border-slate-200 bg-slate-50 p-4 shadow-soft">
-            <div className="flex min-h-[320px] items-center justify-center rounded-md bg-white p-5">
-              <Image src="/logo.png" alt="iDS Expert logo" width={520} height={392} className="h-auto w-full max-w-[520px] object-contain" priority />
-            </div>
-            <div className="mt-4 rounded-md border border-slate-200 bg-white p-4">
+          <div className="grid gap-4">
+            <div className="rounded-md border border-slate-200 bg-white p-4 shadow-soft">
               <label className="sr-only" htmlFor="hero-search">Search applications</label>
               <div className="flex min-h-12 items-center gap-3 rounded-md border border-slate-200 px-4">
                 <Search className="text-brand-blue" size={20} />
                 <input id="hero-search" className="w-full outline-none" placeholder="Search for a job, exam or application form..." />
               </div>
-              <div className="mt-4 flex flex-wrap gap-2">
-                {["Government Jobs", "Recruitment Forms", "Exam Applications", "Admission Forms", "Scholarship Forms", "Other Online Applications"].map((item) => (
-                  <span key={item} className="rounded-md bg-slate-100 px-3 py-2 text-xs font-bold text-slate-700">{item}</span>
+              <div className="mt-4 divide-y divide-slate-200">
+                {jobs.map((job) => (
+                  <article key={job.slug} className="py-4 first:pt-0 last:pb-0">
+                    <div className="flex flex-wrap items-center justify-between gap-2">
+                      <span className="rounded-md bg-brand-gold px-2 py-1 text-[11px] font-black text-brand-navy">{job.status}</span>
+                      <span className="text-xs font-bold text-slate-500">Last date: {job.lastDate}</span>
+                    </div>
+                    <h2 className="mt-3 text-base font-black leading-6 text-brand-navy">{job.title}</h2>
+                    <p className="mt-1 text-sm leading-6 text-slate-600">{job.organization} | {job.location}</p>
+                  </article>
+                ))}
+              </div>
+            </div>
+
+            <div className="rounded-md border border-slate-200 bg-white p-4 shadow-soft">
+              <p className="text-sm font-black uppercase text-brand-blue">Popular Services</p>
+              <div className="mt-3 grid gap-2 sm:grid-cols-2">
+                {services.slice(0, 4).map((service) => (
+                  <div key={service.slug} className="flex items-center gap-3 rounded-md bg-brand-sky px-3 py-3">
+                    <service.icon className="shrink-0 text-brand-blue" size={20} />
+                    <span className="text-sm font-bold leading-5 text-brand-navy">{service.title}</span>
+                  </div>
                 ))}
               </div>
             </div>

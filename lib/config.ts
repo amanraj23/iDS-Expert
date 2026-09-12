@@ -14,11 +14,8 @@ export const siteConfig = {
 export const navItems = [
   { label: "HOME", href: "/" },
   { label: "SERVICES", href: "/services" },
-  { label: "GOVERNMENT JOBS", href: "/government-jobs" },
-  { label: "APPLICATION FORMS", href: "/application-forms" },
-  { label: "CAREERS", href: "/careers" },
-  { label: "OUR MOTIVATION", href: "/our-motivation" },
-  { label: "FAQ", href: "/faq" },
+  { label: "APPLICATIONS", href: "/application-forms" },
+  { label: "REVIEWS", href: "/client-reviews" },
   { label: "CONTACT", href: "/contact" }
 ];
 
