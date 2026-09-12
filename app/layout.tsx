@@ -12,6 +12,11 @@ export const metadata: Metadata = {
     template: "%s | iDS Expert"
   },
   description: siteConfig.description,
+  icons: {
+    icon: "/favicon.png",
+    shortcut: "/favicon.png",
+    apple: "/favicon.png"
+  },
   alternates: { canonical: "/" },
   openGraph: {
     title: "iDS Expert",
