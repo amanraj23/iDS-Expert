@@ -2,10 +2,11 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, MessageCircle, Phone, X } from "lucide-react";
+import { Menu, Phone, X } from "lucide-react";
 import { useState } from "react";
 import { navItems, siteConfig, whatsappUrl } from "@/lib/config";
 import { ButtonLink } from "@/components/ui/ButtonLink";
+import { WhatsAppIcon } from "@/components/icons/WhatsAppIcon";
 
 export function Header() {
   const [open, setOpen] = useState(false);
@@ -20,7 +21,7 @@ export function Header() {
               <Phone size={14} /> {siteConfig.phone}
             </a>
             <a className="inline-flex items-center gap-2 hover:text-brand-gold" href={whatsappUrl()} target="_blank" rel="noreferrer">
-              <MessageCircle size={14} /> WhatsApp Support
+              <WhatsAppIcon size={16} /> WhatsApp Support
             </a>
           </div>
         </div>
@@ -47,7 +48,7 @@ export function Header() {
 
         <div className="hidden items-center gap-2 lg:flex">
           <ButtonLink href={whatsappUrl()} variant="outline" className="h-11 w-11 px-0" target="_blank" rel="noreferrer" aria-label="WhatsApp">
-            <MessageCircle size={18} />
+            <WhatsAppIcon size={24} />
           </ButtonLink>
           <ButtonLink href="/assistance">Get Assistance</ButtonLink>
         </div>
