@@ -19,13 +19,13 @@ export const metadata: Metadata = {
     url: siteConfig.siteUrl,
     siteName: "iDS Expert",
     type: "website",
-    images: [{ url: "/logo.svg", width: 640, height: 360, alt: "iDS Expert" }]
+    images: [{ url: "/logo.png", width: 640, height: 360, alt: "iDS Expert" }]
   },
   twitter: {
     card: "summary_large_image",
     title: "iDS Expert",
     description: siteConfig.description,
-    images: ["/logo.svg"]
+    images: ["/logo.png"]
   }
 };
 

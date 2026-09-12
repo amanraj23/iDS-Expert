@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Menu, Phone, Search, X } from "lucide-react";
+import { Menu, MessageCircle, Phone, Search, X } from "lucide-react";
 import { useState } from "react";
 import { navItems, siteConfig, whatsappUrl } from "@/lib/config";
 import { ButtonLink } from "@/components/ui/ButtonLink";
@@ -12,21 +12,34 @@ export function Header() {
 
   return (
     <header className="sticky top-0 z-40 border-b border-slate-200/80 bg-white/95 backdrop-blur">
-      <div className="container flex min-h-[76px] items-center justify-between gap-4">
+      <div className="hidden border-b border-slate-100 bg-brand-navy py-2 text-xs font-bold text-white lg:block">
+        <div className="container flex items-center justify-between gap-4">
+          <p>Independent private application assistance service</p>
+          <div className="flex items-center gap-5">
+            <a className="inline-flex items-center gap-2 hover:text-brand-gold" href={`tel:${siteConfig.phone}`}>
+              <Phone size={14} /> {siteConfig.phone}
+            </a>
+            <a className="inline-flex items-center gap-2 hover:text-brand-gold" href={whatsappUrl()} target="_blank" rel="noreferrer">
+              <MessageCircle size={14} /> WhatsApp Support
+            </a>
+          </div>
+        </div>
+      </div>
+      <div className="container flex min-h-[82px] items-center justify-between gap-5">
         <Link href="/" className="flex shrink-0 items-center" aria-label="iDS Expert home">
           <Image
-            src="/logo.svg"
+            src="/logo.png"
             alt="iDS Expert"
-            width={170}
-            height={96}
+            width={210}
+            height={140}
             priority
-            className="h-14 w-auto object-contain"
+            className="h-16 w-auto object-contain"
           />
         </Link>
 
-        <nav className="hidden items-center gap-5 xl:flex" aria-label="Primary navigation">
+        <nav className="hidden flex-1 items-center justify-center gap-5 xl:flex" aria-label="Primary navigation">
           {navItems.map((item) => (
-            <Link key={item.href} href={item.href} className="text-xs font-bold text-slate-700 transition hover:text-brand-blue">
+            <Link key={item.href} href={item.href} className="text-[11px] font-black text-slate-700 transition hover:text-brand-blue">
               {item.label}
             </Link>
           ))}
@@ -39,8 +52,8 @@ export function Header() {
           <ButtonLink href={`tel:${siteConfig.phone}`} variant="outline" className="px-4">
             <Phone size={16} /> Call Us
           </ButtonLink>
-          <ButtonLink href={whatsappUrl()} variant="secondary" className="px-4">
-            WhatsApp
+          <ButtonLink href={whatsappUrl()} variant="secondary" className="px-4" target="_blank" rel="noreferrer">
+            <MessageCircle size={16} /> WhatsApp
           </ButtonLink>
           <ButtonLink href="/assistance">Get Assistance</ButtonLink>
         </div>
@@ -65,7 +78,7 @@ export function Header() {
             <div className="grid gap-2 pt-2 sm:grid-cols-3">
               <ButtonLink href="/assistance" className="w-full">Get Assistance</ButtonLink>
               <ButtonLink href={`tel:${siteConfig.phone}`} variant="outline" className="w-full">Call Us</ButtonLink>
-              <ButtonLink href={whatsappUrl()} variant="secondary" className="w-full">WhatsApp</ButtonLink>
+              <ButtonLink href={whatsappUrl()} variant="secondary" className="w-full" target="_blank" rel="noreferrer">WhatsApp</ButtonLink>
             </div>
           </nav>
         </div>

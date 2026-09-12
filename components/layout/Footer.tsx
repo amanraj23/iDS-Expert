@@ -14,7 +14,7 @@ export function Footer() {
     <footer className="border-t border-slate-200 bg-white">
       <div className="container grid gap-10 py-12 lg:grid-cols-[1.4fr_2fr]">
         <div>
-          <Image src="/logo.svg" alt="iDS Expert" width={190} height={108} className="h-16 w-auto object-contain" />
+          <Image src="/logo.png" alt="iDS Expert" width={190} height={108} className="h-16 w-auto object-contain" />
           <p className="mt-4 max-w-md text-sm leading-6 text-slate-600">{siteConfig.description}</p>
           <p className="mt-4 text-sm font-bold text-brand-navy">Phone / WhatsApp: {siteConfig.phone}</p>
         </div>
