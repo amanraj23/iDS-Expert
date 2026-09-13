@@ -3,7 +3,7 @@ import { siteConfig } from "@/lib/config";
 import { jobs, services } from "@/lib/data";
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const staticRoutes = ["", "/services", "/government-jobs", "/application-forms", "/client-reviews", "/careers", "/our-motivation", "/faq", "/contact", "/assistance", "/privacy-policy", "/terms-and-conditions", "/disclaimer"];
+  const staticRoutes = ["", "/about", "/services", "/government-jobs", "/application-forms", "/client-reviews", "/careers", "/our-motivation", "/faq", "/contact", "/assistance", "/privacy-policy", "/terms-and-conditions", "/disclaimer"];
   const routes = [
     ...staticRoutes.map((route) => ({ url: `${siteConfig.siteUrl}${route}`, lastModified: new Date() })),
     ...jobs.map((job) => ({ url: `${siteConfig.siteUrl}/government-jobs/${job.slug}`, lastModified: new Date() })),

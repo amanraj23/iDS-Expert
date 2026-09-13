@@ -3,7 +3,7 @@ import Image from "next/image";
 import { siteConfig } from "@/lib/config";
 
 const groups = [
-  { title: "Company", links: [["Home", "/"], ["Our Motivation", "/our-motivation"], ["Services", "/services"], ["Client Reviews", "/client-reviews"], ["Careers", "/careers"], ["Contact", "/contact"]] },
+  { title: "Company", links: [["Home", "/"], ["About", "/about"], ["Our Motivation", "/our-motivation"], ["Services", "/services"], ["Client Reviews", "/client-reviews"], ["Careers", "/careers"], ["Contact", "/contact"]] },
   { title: "Applications", links: [["Government Jobs", "/government-jobs"], ["Application Forms", "/application-forms"], ["Latest Jobs", "/government-jobs"], ["Closing Soon", "/government-jobs?status=closing-soon"]] },
   { title: "Support", links: [["FAQ", "/faq"], ["Application Assistance", "/assistance"], ["Contact", "/contact"]] },
   { title: "Legal", links: [["Privacy Policy", "/privacy-policy"], ["Terms & Conditions", "/terms-and-conditions"], ["Disclaimer", "/disclaimer"]] }
