@@ -11,10 +11,10 @@ const groups = [
 
 export function Footer() {
   return (
-    <footer className="border-t border-slate-200 bg-white">
+    <footer className="border-t border-brand-gold/20 bg-[#fbfaf4]">
       <div className="container grid gap-10 py-12 lg:grid-cols-[1.4fr_2fr]">
         <div>
-          <Image src="/logo.png" alt="iDS Expert" width={190} height={108} className="h-14 w-auto object-contain" />
+          <Image src="/logo.png" alt="iDS Expert" width={190} height={108} className="h-20 w-auto object-contain" />
           <p className="mt-4 max-w-md text-sm leading-6 text-slate-600">{siteConfig.description}</p>
           <p className="mt-4 text-sm font-bold text-brand-navy">Phone / WhatsApp: {siteConfig.phone}</p>
         </div>
@@ -24,7 +24,7 @@ export function Footer() {
               <h2 className="text-sm font-black text-brand-navy">{group.title}</h2>
               <div className="mt-4 grid gap-3">
                 {group.links.map(([label, href]) => (
-                  <Link key={href + label} href={href} className="text-sm text-slate-600 hover:text-brand-blue">
+                  <Link key={href + label} href={href} className="text-sm text-slate-600 hover:text-brand-gold">
                     {label}
                   </Link>
                 ))}
@@ -33,7 +33,7 @@ export function Footer() {
           ))}
         </div>
       </div>
-      <div className="border-t border-slate-200 bg-brand-navy py-5">
+      <div className="border-t border-brand-gold/20 bg-brand-navy py-5">
         <p className="container text-xs leading-5 text-white/80">
           This website is operated by an independent private application assistance service and is not a government website or government department. Users should verify important information through the official government website before submitting applications or making payments.
         </p>

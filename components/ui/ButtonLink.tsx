@@ -8,9 +8,9 @@ type ButtonLinkProps = AnchorHTMLAttributes<HTMLAnchorElement> & {
 };
 
 const styles = {
-  primary: "bg-brand-gold text-brand-navy shadow-soft hover:bg-amber-400",
+  primary: "bg-brand-gold text-brand-navy shadow-soft hover:bg-[#efbd57]",
   secondary: "bg-brand-navy text-white hover:bg-brand-blue",
-  outline: "border border-brand-blue/25 bg-white text-brand-navy hover:border-brand-blue hover:bg-brand-sky",
+  outline: "border border-brand-gold/35 bg-white text-brand-navy hover:border-brand-gold hover:bg-brand-sky",
   ghost: "text-brand-navy hover:bg-brand-sky"
 };
 

@@ -7,16 +7,16 @@ import { siteConfig } from "@/lib/config";
 export default function HomePage() {
   return (
     <>
-      <section className="overflow-hidden bg-white">
+      <section className="overflow-hidden bg-brand-navy text-white">
         <div className="container grid gap-8 py-10 lg:grid-cols-[.95fr_1.05fr] lg:items-center lg:py-14">
           <div>
-            <div className="inline-flex items-center gap-2 rounded-md border border-brand-blue/15 bg-brand-sky px-3 py-2 text-xs font-black uppercase text-brand-blue">
+            <div className="inline-flex items-center gap-2 rounded-md border border-brand-gold/40 bg-white/10 px-3 py-2 text-xs font-black uppercase text-brand-gold">
               <ShieldCheck size={16} /> Independent assistance portal
             </div>
-            <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-brand-navy sm:text-5xl">
+            <h1 className="mt-5 max-w-3xl text-4xl font-black leading-tight text-white sm:text-5xl">
               Get Assistance With Government Job & Online Application Forms
             </h1>
-            <p className="mt-5 max-w-2xl text-lg leading-8 text-slate-600">
+            <p className="mt-5 max-w-2xl text-lg leading-8 text-white/75">
               Find important application forms, check eligibility and deadlines, and get professional assistance with the online application process.
             </p>
             <div className="mt-7 flex flex-col gap-3 sm:flex-row">
@@ -29,9 +29,9 @@ export default function HomePage() {
                 ["24 hr", "request response"],
                 ["100%", "private service"]
               ].map(([value, label]) => (
-                <div key={label} className="rounded-md border border-slate-200 bg-slate-50 p-4">
-                  <p className="text-2xl font-black text-brand-navy">{value}</p>
-                  <p className="mt-1 text-xs font-bold uppercase text-slate-500">{label}</p>
+                <div key={label} className="rounded-md border border-brand-gold/25 bg-white/10 p-4">
+                  <p className="text-2xl font-black text-brand-gold">{value}</p>
+                  <p className="mt-1 text-xs font-bold uppercase text-white/65">{label}</p>
                 </div>
               ))}
             </div>
@@ -41,13 +41,13 @@ export default function HomePage() {
           </div>
 
           <div className="grid gap-4">
-            <div className="rounded-md border border-slate-200 bg-white p-4 shadow-soft">
+            <div className="rounded-md border border-brand-gold/25 bg-[#fbfaf4] p-4 text-brand-ink shadow-soft">
               <label className="sr-only" htmlFor="hero-search">Search applications</label>
-              <div className="flex min-h-12 items-center gap-3 rounded-md border border-slate-200 px-4">
+              <div className="flex min-h-12 items-center gap-3 rounded-md border border-brand-gold/25 bg-white px-4">
                 <Search className="text-brand-blue" size={20} />
                 <input id="hero-search" className="w-full outline-none" placeholder="Search for a job, exam or application form..." />
               </div>
-              <div className="mt-4 divide-y divide-slate-200">
+              <div className="mt-4 divide-y divide-brand-gold/15">
                 {jobs.map((job) => (
                   <article key={job.slug} className="py-4 first:pt-0 last:pb-0">
                     <div className="flex flex-wrap items-center justify-between gap-2">
@@ -61,7 +61,7 @@ export default function HomePage() {
               </div>
             </div>
 
-            <div className="rounded-md border border-slate-200 bg-white p-4 shadow-soft">
+            <div className="rounded-md border border-brand-gold/25 bg-[#fbfaf4] p-4 text-brand-ink shadow-soft">
               <p className="text-sm font-black uppercase text-brand-blue">Popular Services</p>
               <div className="mt-3 grid gap-2 sm:grid-cols-2">
                 {services.slice(0, 4).map((service) => (
